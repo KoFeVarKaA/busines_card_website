@@ -1,6 +1,8 @@
 <!-- Полезные советы: 
  Называем классы при помощи методологии БЭМ 
- SEO - комплекс мер по улучшению сайда для поисковиков-->
+ SEO - комплекс мер по улучшению сайда для поисковиков
+ 
+ в a/href стоит указывать '/', т.е. ссылку на основную дирректорию-->
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
@@ -11,20 +13,24 @@
     <meta name="discription" content="Сайт-визитка сдланный на чистом css и html">
     <!-- <meta name="keywords" content="Ключевые слова"> -->
     <link rel="shortcut icon" href="img/human.ico", type="image/x-icon">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
   </head>
   <body>
     <!-- Шапка -->
     <header class="header">
+      <img src="img/background1.jpg" alt="background" class="header__background">
+      <div class="header__background-wrapper"></div>
+ 
       <div class="header-top">
-        <span class="logo">Симон Константин</span>
+        <a href="" class="logo">Симон Константин</a>
         <!-- Меню -->
         <nav class="navigation">
           <!-- Список эл. -->
           <ul class="menu">
             <!-- li*8 - shortcut Или ul>li*8 -->
             <li class="menu-element">
-              <a href="" class="menu-element__link">Home</a>
+              <a href="" class="menu-element__link active">Home</a>
             </li>
             <li class="menu-element">
               <a href="" class="menu-element__link">Обо мне</a>
@@ -50,13 +56,18 @@
           </ul>
         </nav>
 
-        <div class="swither">Ru/Eng</div>
+        <div class="swither">
+          <span class="swither-element">Ru</span>
+          <span class="swither-element">Eng</span>
+        </div>
       </div>
 
       <div class="header-center">
-        <h1 class="name">Симон Константин</h1>
-        <p class="discription">Привет! Меня зовут Константин. Я backend-разработчик, давайте знакомиться!</p>
-      </div>
+        <div class="header-center__wrapper">
+          <h1 class="name">Симон Константин</h1>
+          <p class="description">Привет! Меня зовут Константин. Я backend-разработчик, давайте знакомиться!</p>  
+        </div>
+       </div>
     </header>
 
     <!-- Основной контент -->
