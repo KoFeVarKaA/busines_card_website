@@ -1,0 +1,125 @@
+:root {
+    --color-green: #76bc21;
+    --background-black-opacity: rgb(0, 0, 0, 75%);
+}
+
+a {
+    color: var(--color-green);
+    text-decoration: none;  
+}
+
+a:hover {
+    opacity: 70%;
+    transition: opacity 0.5s ease;
+}
+
+.header {
+    position: relative;
+    height: 110vh;
+
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+.header__background{
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+}
+.header__background-wrapper {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+
+    background: #00000050;
+    z-index: 1;
+}
+
+.header-top {
+    position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 80px;
+
+    color: white;
+    background: var(--background-black-opacity);
+    z-index: 2;
+}
+
+.header-top a {
+    color: #fff;
+}
+
+.header-top a.active {
+    color: var(--color-green);
+}
+
+.header-top a.active:hover {
+    color: #82e00e;
+    opacity: 100%;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.menu {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-element{
+    margin-right: 10px;
+    font-size: 17px;
+}
+.menu-element:last-of-type {
+    margin-right: 0px;
+
+}
+
+.swither {
+    margin-right: 90px;
+    margin-left: 90px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background: var(--color-green);
+    border-radius: 20px ;
+    width: 80px;
+    padding: 0 10px;
+
+}
+.swither-element {
+    flex: 1 1 50%;
+    text-align: center;
+}
+
+.header-center{
+    position: relative;
+    display: flex;
+    z-index: 2;
+    
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+
+    color: white;
+}
+.header-center__wrapper {
+    width: 100%;
+    text-align: center;
+    background: var(--background-black-opacity);
+    padding: 22px 0;
+    padding-bottom: 25px;
+}
+
+.name {
+    font-size: 44px;
+    line-height: 50px;
+}
+.description{
+    font-size: 20px;
+}
